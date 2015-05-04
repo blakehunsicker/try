@@ -5,7 +5,8 @@
 
 @-webkit-keyframes cardIn {
   0% { opacity: 1; -webkit-transform: scale3d(.95, .95, .95); transform: scale3d(.95, .95, .95); }
-  50% { opacity: 1; }
+  50% { opacity: 1;     -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) !important;}
 }
 
 @keyframes cardIn {
@@ -28,6 +29,10 @@
   -moz-animation: readIt .3s ease both;
   animation-direction: alternate;
 }
+.cardGoBack {
+  -webkit-animation: cardGoBack .3s ease;
+  -moz-animation: cardGoBack .3s ease;
+}
 
 @-webkit-keyframes readIt {
   0% { -webkit-transform: translateY(0%); transform: translateY(0%) }
@@ -39,17 +44,38 @@
   100% { -webkit-transform: translateY(-100vh); transform: translateY(-100vh) }
 }
 
-.backfield {
-	width:100%;
-	height:100vh;
+@-webkit-keyframes cardGoBack {
+  0% { -webkit-transform: translateY(0%); transform: translateY(0%) }
+  100% { -webkit-transform: translateY(100vh); transform: translateY(100vh) }
 }
 
+@keyframes cardGoBack {
+  0% { -webkit-transform: translateY(0%); transform: translateY(0%) }
+  100% { -webkit-transform: translateY(100vh); transform: translateY(100vh) }
+}
+body {
+
+}
+.hidden {
+	display: none;
+}
+.backfield {
+	width:100%;
+}
+#socialWeighIn {
+	background-color: #f7f7f7;
+}
+.stats {
+	width: 100%;
+	min-height: 100%
+}
 #articleTeaser {
+	width:100%;
 	background-color: #03090E;
 }
 #articleTeaser .item {
-	height: 100vh;
 	width:100%;
+	height: 100vh;
 	padding-top: 50px;
 }
 .teaserInfo {
@@ -98,7 +124,6 @@
 	color: #FF8F60;
 }
 #article {
-	height: 100vh;
 	font-family: Helvetica;
 	background-color: #f7f7f7;
 	color: #2a2a2a;
@@ -107,7 +132,7 @@
 	width:100%;
 }
 #article .item {
-	width: 100%;
+	width: 100% !important;
 	color: #2a2a2a;
 	background-color: #f7f7f7;			
 }
@@ -121,3 +146,4 @@
 	margin-right: 3px;
 	color: gray;
 }
+

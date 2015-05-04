@@ -16,13 +16,22 @@
 
 </head>
 <body>
+
+		<div id="socialWeighIn">
+			<div class="stats">
+				<h3>Social weigh in info to come</h3>
+			</div>
+
 	<div class="backfield">
-		<div id="articleTeaser" class="backfield owl-carousel owl-theme dragtarget" draggable="true" id="dragtarget">
+		<div id="socialWeighIn">
+			<h3>Social weigh in info to come</h3>
+
+		</div>
+		<div id="articleTeaser" class="backfield owl-carousel owl-theme dragtarget">
 			<div class="item blue">
 				<div class="teaserInfo col-xs-10 col-xs-push-1">
 					<h4>WorldViews</h4>
 					French lawmakers are floating a bill that could make leaking classified information safer for whistleblowers.
-					<a href="#" id="toggle">check em</a>
 				</div>
 			</div>
 			<div class="item maroon">
@@ -134,8 +143,6 @@
 				
 			</div>
 		</div>
-	</div>
-
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="js/jquery.touchSwipe.min.js"></script>
@@ -146,9 +153,10 @@
 		$(document).ready(function() {
 
 			var back = $('.backfield');
+			var weighIn = $('#socialWeighIn');
 			var sync1 = $("#articleTeaser");
 		 	var sync2 = $("#article");
-		 
+
 		  	sync1.owlCarousel({
 		    	singleItem : true,
 		    	navigation: false,
@@ -161,8 +169,6 @@
 		   		addClassActive: true,
 		   		startDragging: function(e) {
 		   			e.find(".owl-item")
-		   			.next().addClass('inFront')
-		   			.prev().addClass('behind')
 		   		}
 		  	});
 
@@ -173,24 +179,52 @@
 	      		paginationSpeed : 400,
 	      		singleItem : true,
 	      		loop: true,
-	      		afterMove : function(el){
+	      		afterInit : function(el){
 			    	el.find(".owl-item").eq(0).addClass("synced owl-card-in");
 			    }
 		  	});
 
+			$(function(){
+				$(sync2).addClass('hidden');
+				$(weighIn).addClass('hidden');
+
 			    $(sync1).swipe({
 			        swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
-					    $(sync2).toggleClass('readIt');
+					    $(sync2).toggleClass('readIt hidden');
+					    // $(sync1).toggleClass('hidden');
+
+			    $(sync1).swipe({
+			        swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
+					    $(sync2).toggleClass('readIt hidden');
 			    	},
 			    	swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
-					    alert('social weigh in');
-					}
+					    $(weighIn).toggleClass('hidden');
+					    $(weighIn).swipe({
+							swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
+							    $(weighIn).toggleClass('hidden');
+					    	}
+						})
+					},
+					threshold:100
 			    })
-			    $(sync2).swipe({
-					swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
-					    $(this).toggleClass('readIt');
-					}
-			    })
+			});
+			// $(function(){
+			// 	$(sync2).swipe({
+			// 		swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
+			// 		    $(this).toggleClass('readIt hidden');
+
+			// 		},
+			// 		threshold:400
+			// 	})
+			// });
+
+			// $(function() {
+			// 	$(weighIn).swipe({
+			// 		swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
+			// 		    $(sync2).toggleClass('readIt hidden');
+			//     	}
+			// 	})
+			// })
 
 		 	function syncPosition(el){
     			var current = this.currentItem;
