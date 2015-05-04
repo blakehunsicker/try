@@ -192,23 +192,15 @@
 					    $(sync2).toggleClass('readIt hidden');
 					    // $(sync1).toggleClass('hidden');
 					},
-					// swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
-					//     $(weighIn).toggleClass('hidden');
-					//     $(weighIn).swipe({
-					// 		swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
-					// 		    $(weighIn).toggleClass('hidden');
-					//     	}
-					// 	})
-					// },
 					allowPageScroll: "vertical"
 
 				});
-			  //   $(sync2).swipe({
-			  //       swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
-					//     $(sync2).toggleClass('readIt hidden');
-			  //   	},
-					// threshold:100
-			  //   });
+			    $(sync2).swipe({
+			        swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
+					    $(sync2).toggleClass('readIt hidden');
+			    	},
+					allowPageScroll: "vertical"
+			    });
 						
 			});
 
