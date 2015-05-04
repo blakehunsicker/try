@@ -185,13 +185,13 @@
 				$(sync2).addClass('hidden');
 
 
-			    $('.swipeIt').swipe({
+			    $(sync1).swipe({
 			        swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
 					    $(sync2).toggleClass('readIt hidden');
-					},
-					swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
-					    $(weighIn).toggleClass('readIt hidden');
-			    	}
+					}
+					// swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
+					//     $(weighIn).toggleClass('readIt hidden');
+			  //   	}
 				});
 			    $(sync2).swipe({
 			        swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
