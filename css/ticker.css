@@ -1,0 +1,123 @@
+.owl-card-in {
+  -webkit-animation: cardIn .3s linear both;
+  -moz-animation: cardIn .3s linear both;
+}
+
+@-webkit-keyframes cardIn {
+  0% { opacity: 1; -webkit-transform: scale3d(.95, .95, .95); transform: scale3d(.95, .95, .95); }
+  50% { opacity: 1; }
+}
+
+@keyframes cardIn {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale3d(.95, .95, .95);
+    transform: scale3d(.95, .95, .95);
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) !important;
+  }
+}
+
+.readIt {
+  -webkit-animation: readIt .3s ease both;
+  -moz-animation: readIt .3s ease both;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes readIt {
+  0% { -webkit-transform: translateY(0%); transform: translateY(0%) }
+  100% { -webkit-transform: translateY(-100vh); transform: translateY(-100vh) }
+}
+
+@keyframes readIt {
+  0% { -webkit-transform: translateY(0%); transform: translateY(0%) }
+  100% { -webkit-transform: translateY(-100vh); transform: translateY(-100vh) }
+}
+
+.backfield {
+	width:100%;
+	height:100vh;
+}
+
+#articleTeaser {
+	background-color: #03090E;
+}
+#articleTeaser .item {
+	height: 100vh;
+	width:100%;
+	padding-top: 50px;
+}
+.teaserInfo {
+	font-size: 38px;
+	font-weight: 500;
+	line-height: 1.1;
+	margin-bottom: 20px;
+}
+.mover {
+	opacity: 0.4;
+}
+.blue {
+	color: #708DCA;
+	background-color: #335295;
+}
+.blue h5 {
+	color: #4B69AA;
+}
+.darkBlue {
+	color: #74B6FF;
+	background-color: #284463;
+}
+.darkBlue h5 {
+	color: #47719F;
+}
+.turqoise {
+	color: #67CCA3;
+	background-color: #28986B;
+}
+.turqoise h5 {
+	font-weight: bold;
+	color: #41AD81;
+}
+.orange {
+	color: #FFD480;
+	background-color: #E0A83B;
+}
+.orange h5 {
+	color: #FFC960;
+}
+.maroon {
+	color: #FFA680;
+	background-color: #E06C3B;
+}
+.maroon h5 {
+	color: #FF8F60;
+}
+#article {
+	height: 100vh;
+	font-family: Helvetica;
+	background-color: #f7f7f7;
+	color: #2a2a2a;
+}
+#article img {
+	width:100%;
+}
+#article .item {
+	width: 100%;
+	color: #2a2a2a;
+	background-color: #f7f7f7;			
+}
+.titleAnd h4 {
+	color: #5B94D4;
+}
+.littleGuys .social {
+	display: inline-block;
+	min-height: 40px;
+	min-width: 60px;
+	margin-right: 3px;
+	color: gray;
+}
