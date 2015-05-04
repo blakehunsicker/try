@@ -17,55 +17,55 @@
 </head>
 <body>
 
-	<div class="tryIt">
 		<div id="socialWeighIn">
 			<h3>Social weigh in info to come</h3>
 		</div>
-		<div id="articleTeaser" class="backfield owl-carousel owl-theme dragtarget">
-			<div class="item blue">
-				<div class="teaserInfo col-xs-10 col-xs-push-1">
-					<h4>WorldViews</h4>
-					French lawmakers are floating a bill that could make leaking classified information safer for whistleblowers.
+		<div class="swipeIt">
+			<div id="articleTeaser" class="backfield owl-carousel owl-theme dragtarget">
+				<div class="item blue">
+					<div class="teaserInfo col-xs-10 col-xs-push-1">
+						<h4>WorldViews</h4>
+						French lawmakers are floating a bill that could make leaking classified information safer for whistleblowers.
+					</div>
+				</div>
+				<div class="item maroon">
+					<div class="teaserInfo col-xs-10 col-xs-push-1">
+						"Box had come out like a rocket ship, a darling of Silicon Valley. Then it hit some bumps... and learned the real world won't hesitate to knock you down."
+						<h4>Wall Street Journal</h4>
+					</div>
+				</div>
+				<div class="item turqoise">
+					<div class="teaserInfo col-xs-10 col-xs-push-1">
+						<h5>A WAY WITH WORDS</h5>
+						<span>Learning German will earn you an extra $128,000 over your career. Thats three times more than Spanish.</span>
+					</div>
+				</div>
+				<div class="item orange">
+					<div class="teaserInfo col-xs-10 col-xs-push-1">
+						<h5>BALTIMORE</h5>
+						<span>A prisoner who rode with Freddy Gray to jail says he thinks Gray was trying to hurt himself before his death</span>
+					</div>
+				</div>
+				<div class="item blue">
+					<div class="teaserInfo col-xs-10 col-xs-push-1">
+						<h5>WHY TESLA'S HOME BATTERY WILL BE HUGE</h5>
+						<span>Tesla Motors' new home batteries will save solar energy for later use, which could let homes completely power themselves</span>
+					</div>
+				</div>
+				<div class="item turqoise">
+					<div class="teaserInfo col-xs-10 col-xs-push-1">
+						<h5>BALTIMORE</h5>
+						<span>15 Baltimore neighborhoods have lower life expectancies than North Korea</span>
+					</div>
+				</div>
+				<div class="item darkBlue">
+					<div class="teaserInfo col-xs-10 col-xs-push-1">
+						"Moments before his death, convicted drug smuggler Rodrigo Gularte was quiet and cool."
+						<h5>Before facing firing squad, mentally ill inmate asks: ‘Am I being executed?’</h5>
+					</div>
 				</div>
 			</div>
-			<div class="item maroon">
-				<div class="teaserInfo col-xs-10 col-xs-push-1">
-					"Box had come out like a rocket ship, a darling of Silicon Valley. Then it hit some bumps... and learned the real world won't hesitate to knock you down."
-					<h4>Wall Street Journal</h4>
-				</div>
-			</div>
-			<div class="item turqoise">
-				<div class="teaserInfo col-xs-10 col-xs-push-1">
-					<h5>A WAY WITH WORDS</h5>
-					<span>Learning German will earn you an extra $128,000 over your career. Thats three times more than Spanish.</span>
-				</div>
-			</div>
-			<div class="item orange">
-				<div class="teaserInfo col-xs-10 col-xs-push-1">
-					<h5>BALTIMORE</h5>
-					<span>A prisoner who rode with Freddy Gray to jail says he thinks Gray was trying to hurt himself before his death</span>
-				</div>
-			</div>
-			<div class="item blue">
-				<div class="teaserInfo col-xs-10 col-xs-push-1">
-					<h5>WHY TESLA'S HOME BATTERY WILL BE HUGE</h5>
-					<span>Tesla Motors' new home batteries will save solar energy for later use, which could let homes completely power themselves</span>
-				</div>
-			</div>
-			<div class="item turqoise">
-				<div class="teaserInfo col-xs-10 col-xs-push-1">
-					<h5>BALTIMORE</h5>
-					<span>15 Baltimore neighborhoods have lower life expectancies than North Korea</span>
-				</div>
-			</div>
-			<div class="item darkBlue">
-				<div class="teaserInfo col-xs-10 col-xs-push-1">
-					"Moments before his death, convicted drug smuggler Rodrigo Gularte was quiet and cool."
-					<h5>Before facing firing squad, mentally ill inmate asks: ‘Am I being executed?’</h5>
-				</div>
-			</div>
-		</div>	
-	</div>
+		</div>
 
 		<div id="article" class="col-sx-12 owl-carousel owl-theme">
 				<div class="item">
@@ -185,10 +185,13 @@
 				$(sync2).addClass('hidden');
 
 
-			    $(sync1).swipe({
+			    $('.swipeIt').swipe({
 			        swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
 					    $(sync2).toggleClass('readIt hidden');
-					}
+					},
+					swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
+					    $(weighIn).toggleClass('readIt hidden');
+			    	}
 				});
 			    $(sync2).swipe({
 			        swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
