@@ -17,15 +17,9 @@
 </head>
 <body>
 
-		<div id="socialWeighIn">
-			<div class="stats">
-				<h3>Social weigh in info to come</h3>
-			</div>
-
-	<div class="backfield">
+<div class="backfield">
 		<div id="socialWeighIn">
 			<h3>Social weigh in info to come</h3>
-
 		</div>
 		<div id="articleTeaser" class="backfield owl-carousel owl-theme dragtarget">
 			<div class="item blue">
@@ -144,6 +138,9 @@
 			</div>
 		</div>
 
+		<div id="backButton" style="top:95%;left:95%;position:fixed;"><i class="fa fa-arrow-circle-up fa-3x"></i></div>
+	</div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="js/jquery.touchSwipe.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -192,7 +189,6 @@
 			        swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
 					    $(sync2).toggleClass('readIt hidden');
 					    // $(sync1).toggleClass('hidden');
-
 			    $(sync1).swipe({
 			        swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
 					    $(sync2).toggleClass('readIt hidden');
