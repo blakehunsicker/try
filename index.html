@@ -189,22 +189,24 @@
 			        swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
 					    $(sync2).toggleClass('readIt hidden');
 					    // $(sync1).toggleClass('hidden');
-			    $(sync1).swipe({
-			        swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
-					    $(sync2).toggleClass('readIt hidden');
-			    	},
-			    	swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
+					},
+					swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
 					    $(weighIn).toggleClass('hidden');
 					    $(weighIn).swipe({
 							swipeUp:function(event, direction, distance, duration, fingerCount, fingerData) {
 							    $(weighIn).toggleClass('hidden');
 					    	}
 						})
-					},
+					}
+				});
+			    $(sync2).swipe({
+			        swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
+					    $(sync2).toggleClass('readIt hidden');
+			    	},
 					threshold:100
 			    })
-			});
-			// $(function(){
+						
+			});			// $(function(){
 			// 	$(sync2).swipe({
 			// 		swipeDown:function(event, direction, distance, duration, fingerCount, fingerData) {
 			// 		    $(this).toggleClass('readIt hidden');
