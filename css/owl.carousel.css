@@ -24,7 +24,7 @@
 	-webkit-transform: translate3d(0px, 0px, 0px);
 	transition: foward .1s ease !important;
 }
-.owl-carousel .owl-wrapper-outer{
+#articleTeaser .owl-wrapper-outer{
 	overflow: hidden;
 	position: relative;
 	width: 100%;
@@ -41,7 +41,7 @@
 	float: left;
 }
 
-.owl-carousel .owl-item .item{
+#articleTeaser.owl-carousel .owl-item .item{
 	-webkit-transform: scale3d(.95, .95, .95);
 	transform: scale3d(.95, .95, .95);
 /*	transform: translate(0%, 0%);
