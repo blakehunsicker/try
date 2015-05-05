@@ -124,8 +124,8 @@ body {
 	color: #FF8F60;
 }
 #article {
-	height: 100vh;
-	font-family: Helvetica;
+/*	height: 100vh;
+*/	font-family: Helvetica;
 	background-color: #f7f7f7;
 	color: #2a2a2a;
 }
