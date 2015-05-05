@@ -129,8 +129,8 @@ body {
 	background-color: #f7f7f7;
 	color: #2a2a2a;
 }
-#article img {
-	width:100%;
+.titleAnd img {
+	max-width:100%;
 }
 #article .item {
 	width: 100% !important;
