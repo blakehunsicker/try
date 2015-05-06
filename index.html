@@ -276,7 +276,7 @@
 			    }
 		  	});
 
-		  	$('.synced').css('transform', 'translate3d(95%,0%,0%)');
+		  	$('.synced').css('transform', 'scale3d(95%,95%,95%)');
 
 			function syncPosition(el){
     			var current = this.currentItem;
@@ -290,13 +290,13 @@
     			}
 
 			  	$("i.next").click(function(e){
-			  		e.preventDefault();
+			  		// e.preventDefault();
 			  		console.log('next')
 
 				})
 				$("i.prev").click(function(){
 				    console.log('prev');
-				    $('.synced').addClass('leaving');
+				    // $('.synced').addClass('leaving');
 				})
   			}
 
