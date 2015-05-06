@@ -137,8 +137,8 @@ body {
 }
 
 .synced {
-  -webkit-animation: synced .2s ease;
-  -moz-animation: synced .2s ease;
+  -webkit-animation: synced .1s ease;
+  -moz-animation: synced .1s ease;
 }
 
 @-webkit-keyframes synced {
@@ -148,8 +148,8 @@ body {
   	100% { opacity: 1; }
 }
 .leaving {
-  -webkit-animation: leaving .2s ease;
-  -moz-animation: leaving .2s ease;
+  -webkit-animation: leaving .1s ease;
+  -moz-animation: leaving .1s ease;
 }
 
 @-webkit-keyframes leaving {
