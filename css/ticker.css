@@ -148,6 +148,15 @@ body {
   	50% { opacity: 0.2;}*/
   	100% { opacity: 1; }
 }
+
+/*@-webkit-keyframes synced {
+  	0% { opacity: 0; -webkit-transform: scale3d(-385px, 0px, 0px); transform: translateX(-385px, 0px, 0px); }
+  	10% { -webkit-transform: translate3d(-385px, 0px, 0px); transform: translateX(-385px, 0px, 0px) ;}
+  	10% { opacity: 0;}
+  	50% { opacity: 0.2;}
+  	100% { opacity: 1; }
+}*/
+
 .leaving {
   -webkit-animation: leaving .1s ease;
   -moz-animation: leaving .1s ease;
