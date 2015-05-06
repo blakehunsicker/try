@@ -137,15 +137,15 @@ body {
 }
 
 .synced {
-  -webkit-animation: synced .5s ease;
-  -moz-animation: synced .5s ease;
+  -webkit-animation: synced .2s ease;
+  -moz-animation: synced .2s ease;
 }
 
 @-webkit-keyframes synced {
-  	0% { opacity: 0; -webkit-transform: translateX(-400px); transform: translateX(-400px); }
-/*  	10% { -webkit-transform: translate3d(-400px, 0px, 0px); transform: translateX(-400px, 0px, 0px) ;}
-  	10% { opacity: 0;}*/
-  	10% { opacity: 0.1; -webkit-transform: translate3d(-10px, 0px, 0px); transform: translateX(-10px, 0px, 0px); }
+  	0% { opacity: 0; -webkit-transform: translateX(-400px); transform: translateX(-400px, 0px, 0px); }
+  	10% { -webkit-transform: translate3d(-400px, 0px, 0px); transform: translateX(-400px, 0px, 0px) ;}
+/*  	10% { opacity: 0;}
+*/  	90% { opacity: 0.4;}
   	100% { opacity: 1; }
 }
 
